@@ -1,30 +1,30 @@
 class Duck {
-	FlyBehavior flyBehavior;//发行行为
-	QuackBehavior quackBehavior;//叫行为
+private:
+	FlyBehavior flyBehavior;//飞行行为
+	QuackBehavior quackBehavior;//发生行为
+ public:
+	Duck();
  
-	public Duck() {
-	}
- 
-	public void setFlyBehavior (FlyBehavior fb) {
+	void setFlyBehavior (FlyBehavior fb) {
 		flyBehavior = fb;
 	}
  
-	public void setQuackBehavior(QuackBehavior qb) {
+	void setQuackBehavior(QuackBehavior qb) {
 		quackBehavior = qb;
 	}
  
 	//abstract void display();
-  virtual void display()=0;
+  	virtual void display()=0;//抽象方法
  
-	public void performFly() {
+	void performFly() {
 		flyBehavior.fly();
 	}
  
-	public void performQuack() {
+	void performQuack() {
 		quackBehavior.quack();
 	}
  
-	public void swim() {
+	void swim() {
 		std::cout<<"All ducks float, even decoys!";
 	}
 }
